@@ -1,0 +1,17 @@
+<!--pages/tist/tist.wxml-->
+<view class="txtarea">
+  <picker bindchange="bindPickerChange1" value="{{mouth}}" range="{{mouthlist}}">
+      <view class="box2"> {{mouth}} </view>
+  </picker>
+  <button bind:tap="search" size="mini" type="primary" class="box" >查询</button>
+  <button bind:tap="delete" size="mini" type="warn" class="box" >删除</button>
+</view>
+
+<view wx:for="{{tistdata}}" wx:key="index" class="card">
+  <view class="tip">{{item.number}}</view>
+  <view class="yuan">号</view>
+  <view class="timebase"> 
+    <view class="time">{{item.treat}}</view>
+    <view class="time1">{{item.mouth}} 月</view>
+  </view>
+</view>

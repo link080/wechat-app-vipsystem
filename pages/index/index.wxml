@@ -1,0 +1,45 @@
+<!--index.wxml-->
+
+<!--循环展示-->
+<view class="show">
+  <swiper class="display" 	indicator-dots="true" autoplay="true" 	circular="true" 	indicator-active-color="rgba(255,255,255,1)"> 
+    <swiper-item><image src="../../image/1.jpg" ></image></swiper-item>
+    <swiper-item><image src="../../image/2.jpg"></image></swiper-item>
+  </swiper>
+</view>
+
+<!--标题导览-->
+<view class="title">
+    <view class="TxtA">发型样式</view>
+</view>
+
+<!--发型选择-->
+<view class="hair"> 
+      <view class="Base">
+        <image src="../../image/hair1.jpg" class="Pic"/>
+      </view>
+     
+      <view class="Base">
+        <image src="../../image/hair2.jpg" mode="" class="Pic"/>
+      </view>
+
+      <view class="Base">
+        <image src="../../image/hair3.jpg" mode="" class="Pic"/>
+      </view>
+
+      <view class="Base">
+        <image src="../../image/hair4.jpg" mode="" class="Pic"/>
+      </view>
+</view>
+
+<!--标题导览-->
+<view class="title">
+        <view class="TxtA">其他</view>
+</view>
+
+<view class="hair"> 
+      <navigator url="../manager/manager" class="Base">
+        <image src="../../image/maner.jpg" class="Pic1"/>
+        <view class="Txt">管理员登陆</view>
+      </navigator>
+</view>

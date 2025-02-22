@@ -1,0 +1,38 @@
+<view wx:if="{{ifPerss}}">
+  <view wx:if="{{ifOld}}" style="justify-content: center;">
+  <view class="base">
+    <view style="font-size: 22px;margin-top: 16rpx;margin-left: 10%;">卡号：</view>
+    <input bindinput="getNum" class="shop" placeholder="请输入卡号" placeholder-style="font-size:22px;" type="number"></input>
+  </view>
+
+  <view class="base">
+    <view style="font-size: 22px;margin-top: 16rpx;margin-left: 10%;">姓名：</view>
+    <input bindinput="getName" class="shop" placeholder="请输入姓名" placeholder-style="font-size:22px;"></input>
+  </view>
+
+  <view class="base">
+    <view style="font-size: 22px;margin-top: 16rpx;margin-left: 10%;">手机：</view>
+    <input bindinput="getPhone" class="shop" placeholder="请输入手机" placeholder-style="font-size:22px;" type="number"></input>
+  </view>
+    <button class="ser" bind:tap="btncomp" type="primary" >提交查询</button>
+  </view>
+
+  <view wx:else>
+  <view class="base">
+    <view style="font-size: 22px;margin-top: 16rpx;margin-left: 10%;">姓名：</view>
+    <input bindinput="getName" class="shop" placeholder="请输入姓名" placeholder-style="font-size:22px;"></input>
+  </view>
+
+  <view class="base">
+    <view style="font-size: 22px;margin-top: 16rpx;margin-left: 10%;">手机：</view>
+    <input bindinput="getPhone" class="shop" placeholder="请输入手机" placeholder-style="font-size:22px;" type="number"></input>
+  </view>
+    <button class="ser" bind:tap="btncompn" type="primary" >提交申请</button>
+  </view>
+</view>
+
+<view wx:else class="section">
+    <button type="primary" style="margin-top: 20%;" bind:tap="btnOld"> 老用户注册 </button>
+    <button form-type="submit" style="margin-top: 20%;" bind:tap="btnNew"> 新用户注册 </button>
+</view>
+

@@ -1,0 +1,7 @@
+<!--pages/check/check.wxml-->
+<view wx:for="{{tistdata}}" wx:key="index" class="card">
+  <view class="tip">{{item.treat}}</view>
+  <view class="timebase"> 
+    <view class="time">{{item.mouth}} 月</view>
+  </view>
+</view>

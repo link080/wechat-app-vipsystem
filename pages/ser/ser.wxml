@@ -1,0 +1,25 @@
+<view class="backagr">
+  <view wx:if="{{ifser}}" class="base1">
+    <view style="width: 100%;height: 30px; font-size: 22px;margin:20rpx 20rpx;">客人名字: </view>
+      <input bindinput="getcusName" class="shop1" placeholder="请输入名字" placeholder-style="font-size:22px;"></input>
+    <view style="width: 100%;height: 30px; font-size: 22px;margin:20rpx 20rpx;">客人卡号: </view>
+      <input bindinput="getcusNumb" class="shop1" placeholder="请输入卡号" placeholder-style="font-size:22px;"></input>
+    <view style="width: 100%;height: 30px; font-size: 22px;margin:20rpx 20rpx;">客人单号: </view>
+      <input bindinput="getcusCall" class="shop1" placeholder="请输入单号" placeholder-style="font-size:22px;"></input>
+      <button bind:tap="btnser" type="primary" style="margin-top: 70px;">查询登记用户</button>
+      <button bind:tap="btnOld" type="primary" style="margin-top: 70px;">查询老用户信息</button>
+    </view>
+
+  <view wx:else>
+    <view class="showtext">姓名: {{custdata.Name}}</view>
+    <view class="showtext">卡号: {{custdata.number}}</view>
+    <view class="showtext">电话: {{custdata.Phone}}</view>
+    <view class="showtext">余额: {{custdata.money}} 元</view>
+    <view style="width: 100%;height: 30px; font-size: 22px;margin:0 20rpx;margin-top: 100rpx;">金额: </view>
+      <input bindinput="getCost" class="shop" placeholder="请输入交易金额" placeholder-style="font-size:22px;" type="number"></input>
+      <button bind:tap="btnchong" type="primary" style="margin-bottom: 100rpx;">充值</button>
+      <button bind:tap="btnxiao" type="primary" >消费</button>
+  </view>
+</view>
+
+xia

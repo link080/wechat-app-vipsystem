@@ -1,0 +1,25 @@
+<!--pages/manager/manager.wxml-->
+<view wx:if="{{iflogin}}" class="base">
+  账号：
+  <input bindinput="getName" class="in"></input >
+  密码：
+  <input bindinput="getPas" class="in"></input >
+  <button class="btn" bind:tap="btnPes">登陆</button>
+</view>
+
+  <view wx:else class="backagr">
+    <view wx:if="{{ifscan}}" class="base1">
+      <view style="width: 100%;height: 30px; font-size: 22px;margin:20rpx 20rpx;">金额: </view>
+      <input bindinput="getNum" class="shop" placeholder="请输入交易金额" placeholder-style="font-size:22px;" type="number"></input>
+        <button bind:tap="btnchong" type="primary" style="margin-bottom: 100rpx;">充值</button>
+        <button bind:tap="btnxiao" type="primary" >消费</button>
+    </view>
+
+    <view wx:else >
+      <image src="../../image/check.png" style="width: 81px;height: 81px;margin-top: 200rpx;position: relative;left: 50%;margin-left: -35px;"/>
+      <button type="default" bind:tap="scan" style="margin-top: 100rpx;">点击扫码识别</button>
+      <button type="default" bind:tap="number" style="margin-top: 100rpx;">点击查询卡号</button>
+      <button type="default" bind:tap="tist" style="margin-top: 100rpx;">点击查询流水</button>
+    </view>
+  </view>
+

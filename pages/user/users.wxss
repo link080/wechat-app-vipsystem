@@ -1,0 +1,30 @@
+/* pages/user/users.wxss */
+page{background: #ececec;}
+
+.header{width: 100%;height: 410rpx;background: #eeeeee;}
+.header .img{ width: 120rpx;height: 120rpx;border-radius: 50%;position: relative;left: 50%;margin-left: -60rpx;}
+.header .txt{text-align: center;margin-top: 50rpx;}
+.card{width: 100%; height: 160rpx;border-radius: 2%; background: rgb(255, 255, 255);position: absolute;margin-top: 30rpx;}
+
+.myMonback{width: 100%;height: 160px;box-sizing: border-box;padding-top: 220rpx;background: rgb(255, 255, 255);}
+.myMonIco{width: 100%;height: 90px;display: flex;margin-top: 20px;background :rgb(255, 255, 255);}
+.myMonIco1{width: 100%;height: 90px;display: flex;margin-top: 20px;background :rgb(255, 255, 255);}
+.myIndex{flex: 1; text-align:center;}
+
+.mySerback{width: 100%;height: 160px;}
+.mySer{widows: 100%; height: 140px;margin: 0 10px;background: #fafafa;border-radius: 3%;box-sizing: border-box;}
+.txt{font-size:medium;margin: 10px 10px;color: #4e4e4e;}
+.mySerIco{width: 100%;height: 130px;display: flex;margin-top: 10px;}
+
+.charge{flex: 1; margin: 10px 20px; text-align:center;}
+
+.serimg{display: block; width: 46px;height: 46px;margin-left:40rpx ;}
+.serimg2{display: block; width: 46px;height: 46px;margin-left:270rpx ;}
+
+.icontext{margin-top: 10rpx; font-size: 30rpx;}
+.icontext1{margin-top: 10rpx; font-size: 30rpx;color: #a3a3a3;}
+
+.mySer1{widows: 100%; height: 200px;margin: 0 10px;background: #fafafa;border-radius: 3%;box-sizing: border-box;}
+.charge1{width: 100%; height: 160rpx;position: absolute;}
+.serimg1{width: 120px;height: 120px;position: relative;left: 50%;margin-left: -140rpx;}
+.icontext2{margin-top: 20rpx; font-size: 30rpx;text-align: center;margin-right: 25rpx;}

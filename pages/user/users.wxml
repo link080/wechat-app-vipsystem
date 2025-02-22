@@ -1,0 +1,92 @@
+<!--pages/user/users.wxml-->
+<view class="header">
+  <view class="card">
+    <view wx:if="{{ userInfo }}">
+      <image  src="https://thirdwx.qlogo.cn/mmopen/vi_32/POgEwh4mIHO4nibH0KlMECNjjGxQUq24ZEaGT4poC6icRiccVGKSyXwibcPq4BWmiaIGuG1icwxaQX6grC9VemZoJ8rg/132" class="img"/>
+      <view class="txt">用户 NO.{{userInfo.number}}</view>
+    </view>
+    <view wx:else>
+      <image bind:tap="userSignIn" src="../../image/kefu (1).png" class="img"/>
+      <view wx:if="{{ifloading}}" bind:tap="userSignIn" class="txt" >点击登陆</view>
+      <view wx:else class="txt" >点击登陆</view>
+    </view>
+  </view>
+
+  <view class="myMonback">
+    <view wx:if="{{ifcard}}" class="myMonIco1">
+      <view class="myIndex">
+          <view class="icontext1">请领卡查看</view>
+          <view class="icontext1">余额</view>
+      </view>
+
+      <view class="myIndex">
+          <view class="icontext1">请领卡查看</view>
+          <view class="icontext1">积分</view>
+      </view>
+
+      <view class="myIndex">
+          <view class="icontext1">请领卡查看</view>
+          <view class="icontext1">优惠券</view>
+      </view>
+    </view>
+    <view wx:else class="myMonIco">
+      <view class="myIndex">
+          <view class="icontext">{{userInfo.money || 0}}</view>
+          <view class="icontext">余额</view>
+      </view>
+
+      <view class="myIndex">
+          <view class="icontext">{{userInfo.jifen || 0}}</view>
+          <view class="icontext">积分</view>
+      </view>
+
+      <view class="myIndex">
+          <view class="icontext">{{userInfo.ticket || 0}}</view>
+          <view class="icontext">优惠券</view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class="mySerback">
+  <view class="mySer">
+    <text class="txt">我的服务</text>
+
+    <view wx:if="{{iflogin}}" class="mySerIco">
+      <navigator wx:if="{{ifcard}}" class="charge" url="../perserve/perserve?data={{userInfoTo}}">
+          <image class="serimg2" src="../../image/card.png" ></image>
+          <view class="icontext">我要办卡</view>
+      </navigator>
+
+      <navigator wx:else class="charge" url="../check/check?data={{userInfoTo}}">
+          <image class="serimg2" src="../../image/card.png" ></image>
+          <view class="icontext">我的账单</view>
+      </navigator>
+
+    </view>
+
+    <view wx:else class="mySerIco">
+      <view bind:tap="pressunlogin" class="charge">
+          <image class="serimg2" src="../../image/card.png" ></image>
+          <view class="icontext">我要办卡</view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view wx:if="{{ifcard}}"></view>
+<view wx:else class="mySer1">
+  <text class="txt">我的会员码</text>
+    <view class="mySerIco">
+      <view class="charge1">
+        <view wx:if="{{ifshow}}">
+          <image class="serimg1" src="../../image/code.png" ></image>
+        </view>
+        <view wx:else>
+          <canvas type="2d" class="serimg1" id="myQrcode"></canvas>
+        </view>
+          <button bind:tap="code" >出示我的会员码</button>
+      </view>
+    </view>
+</view>
+
